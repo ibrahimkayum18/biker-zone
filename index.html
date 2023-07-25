@@ -12,51 +12,135 @@
     <!-- Tailwind and daisy UI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+              'pink': '#E76F51',
+              'banner-pink': 'rgba(231, 111, 81, 0.10)',
+              'banner-honda': '#264653',
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      .poppins{
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
+<body class="poppins">
+    <header class="md:container md:mx-auto">
+        <nav class="mt-5">
             <div class="navbar bg-base-100">
-                <div class="navbar-start">
+                <div class="flex-1">
                   <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost lg:hidden">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                      <li><a>Item 1</a></li>
-                      <li>
-                        <a>Parent</a>
-                        <ul class="p-2">
-                          <li><a>Submenu 1</a></li>
-                          <li><a>Submenu 2</a></li>
-                        </ul>
-                      </li>
-                      <li><a>Item 3</a></li>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 text-base rounded-box w-52">
+                      <li><a>Home</a></li>
+                      <li><a href="#">Shop</a></li>
+                      <li><a>News</a></li>
+                      <li><a>Contact</a></li>
                     </ul>
                   </div>
-                  <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+                  <a class="btn btn-ghost normal-case text-4xl">Bikerz Zone</a>
                 </div>
-                <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li tabindex="0">
-                      <details>
-                        <summary>Parent</summary>
-                        <ul class="p-2">
-                          <li><a>Submenu 1</a></li>
-                          <li><a>Submenu 2</a></li>
-                        </ul>
-                      </details>
-                    </li>
-                    <li><a>Item 3</a></li>
+                <div class="navbar-end hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1 text-base">
+                    <li><a>Home</a></li>
+                      <li><a href="#">Shop</a></li>
+                      <li><a>News</a></li>
+                      <li><a>Contact</a></li>
                   </ul>
                 </div>
-                <div class="navbar-end">
-                  <a class="btn">Button</a>
+                <div class="">
+                  <a class="btn bg-pink text-white uppercase flex-1">Log in</a>
                 </div>
               </div>
         </nav>
-
+        <div class="carousel h-auto lg:h-[550px] w-full mt-16">
+          <div id="slide1" class="carousel-item relative w-full bg-banner-pink">
+            <div class="flex gap-32 md:gap-32 lg:gap-5 flex-col md:flex-col lg:flex-row justify-between items-center p-5 lg:p-24">
+              <div class="flex-1 space-y-7">
+                <h3 class="text-6xl font-semibold">Ride-on R15 V4 
+                  <br>
+                   with Smile</h3>
+                <p>Amet minim mollit non deserunt ullamco 
+                  est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                  <button><a class="btn bg-pink text-white uppercase flex-1">purchase</a></button>
+              </div>
+              <div class="flex-1">
+                <img src="/images//slider/bike1.png" class="w-full" />
+              </div>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide4" class="btn btn-circle">❮</a> 
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div> 
+          <div id="slide2" class="carousel-item relative w-full bg-banner-pink">
+            <div class="flex gap-32 md:gap-32 lg:gap-5 flex-col md:flex-col lg:flex-row justify-between items-center p-5 lg:p-24">
+              <div class="flex-1 space-y-7">
+                <h3 class="text-6xl font-semibold">Ride-on R15 V4 
+                  <br>
+                   with Smile</h3>
+                <p>Amet minim mollit non deserunt ullamco 
+                  est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                  <button><a class="btn bg-pink text-white uppercase flex-1">purchase</a></button>
+              </div>
+              <div class="flex-1">
+                <img src="/images//slider/bike2.png" class="w-full" />
+              </div>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide1" class="btn btn-circle">❮</a> 
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div> 
+          <div id="slide3" class="carousel-item relative w-full bg-banner-honda text-white">
+            <div class="flex gap-32 md:gap-32 lg:gap-5 flex-col md:flex-col lg:flex-row justify-between items-center p-5 lg:p-24">
+              <div class="flex-1 space-y-7">
+                <h3 class="text-6xl font-semibold">Ride-on R15 V4 
+                  <br>
+                   with Smile</h3>
+                <p>Amet minim mollit non deserunt ullamco 
+                  est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                  <button><a class="btn bg-pink text-white uppercase flex-1 border-none">purchase</a></button>
+              </div>
+              <div class="flex-1">
+                <img src="/images//slider/bike2.png" class="w-full" />
+              </div>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide2" class="btn btn-circle">❮</a> 
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div> 
+          <!-- <div id="slide4" class="carousel-item relative w-full">
+            <div>
+              <div class="hero min-h-screen" style="background-image: url(images/slider//bike-bg.jpg);">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+                    <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <button class="btn btn-primary">Get Started</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide3" class="btn btn-circle">❮</a> 
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div> -->
+        </div>
     </header>
     <main class="mb-15">
         <h3 class="text-4xl text-center mt-16 mb-16">Fetured Bikes In This Year</h3>
@@ -228,7 +312,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer flex justify-between py-10 px-5 lg:px-36 bg-neutral text-neutral-content">
+    <footer class="footer flex justify-between py-10 px-5 lg:px-36 bg-neutral text-neutral-content mt-24">
         <div>
           <p class="">Download  <span class="text-sm">  License</span></p>
           <ul class="grid gap-3 grid-cols-3 md:grid-cols-6 lg:grid-cols-6 menu-horizontal">
